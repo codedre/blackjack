@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     func endGame(){
         self.redBox.hidden = true
         hideResults(false)
+        playButton.hidden = false
     }
     
     //When app loads some objects are hidden
