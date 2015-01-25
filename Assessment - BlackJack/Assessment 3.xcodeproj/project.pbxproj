@@ -16,6 +16,12 @@
 		7CD52BD21A72E21C00176059 /* CardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD52BD11A72E21C00176059 /* CardGame.swift */; };
 		7CD52BD41A72E2C000176059 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD52BD31A72E2C000176059 /* Player.swift */; };
 		7CD52BD81A72E67F00176059 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD52BD71A72E67F00176059 /* SecondViewController.swift */; };
+		7FBABF461A74C5F8001F95E9 /* tableBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FBABF451A74C5F8001F95E9 /* tableBackground.jpg */; };
+		7FBABF481A74C831001F95E9 /* blackjack_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBABF471A74C831001F95E9 /* blackjack_logo.png */; };
+		7FBABF4A1A74D01B001F95E9 /* play-now-button-en-us.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBABF491A74D01B001F95E9 /* play-now-button-en-us.png */; };
+		7FBABF4E1A74D9A0001F95E9 /* card-game-48983_640.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBABF4D1A74D9A0001F95E9 /* card-game-48983_640.png */; };
+		7FBABF501A74DF0E001F95E9 /* 0013089_dsg-playing-card-deck-54-card-deck.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBABF4F1A74DF0E001F95E9 /* 0013089_dsg-playing-card-deck-54-card-deck.png */; };
+		7FBABF521A74EC0D001F95E9 /* gold-coins-in-a-pot-md.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBABF511A74EC0D001F95E9 /* gold-coins-in-a-pot-md.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,13 @@
 		7CD52BD11A72E21C00176059 /* CardGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardGame.swift; sourceTree = "<group>"; };
 		7CD52BD31A72E2C000176059 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		7CD52BD71A72E67F00176059 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7FBABF451A74C5F8001F95E9 /* tableBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tableBackground.jpg; sourceTree = "<group>"; };
+		7FBABF471A74C831001F95E9 /* blackjack_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackjack_logo.png; sourceTree = "<group>"; };
+		7FBABF491A74D01B001F95E9 /* play-now-button-en-us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-now-button-en-us.png"; sourceTree = "<group>"; };
+		7FBABF4D1A74D9A0001F95E9 /* card-game-48983_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card-game-48983_640.png"; sourceTree = "<group>"; };
+		7FBABF4F1A74DF0E001F95E9 /* 0013089_dsg-playing-card-deck-54-card-deck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0013089_dsg-playing-card-deck-54-card-deck.png"; sourceTree = "<group>"; };
+		7FBABF511A74EC0D001F95E9 /* gold-coins-in-a-pot-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gold-coins-in-a-pot-md.png"; sourceTree = "<group>"; };
+		7FFC1D6B1A741989001D8B74 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +96,7 @@
 		7C86285D1A71F5C0004AAD02 /* Assessment 3 */ = {
 			isa = PBXGroup;
 			children = (
+				7FBABF421A74C479001F95E9 /* imgs */,
 				7C8628601A71F5C0004AAD02 /* AppDelegate.swift */,
 				7C8628621A71F5C0004AAD02 /* ViewController.swift */,
 				7C8628641A71F5C0004AAD02 /* Main.storyboard */,
@@ -92,6 +106,7 @@
 				7CD52BD11A72E21C00176059 /* CardGame.swift */,
 				7CD52BD31A72E2C000176059 /* Player.swift */,
 				7CD52BD71A72E67F00176059 /* SecondViewController.swift */,
+				7FFC1D6B1A741989001D8B74 /* MyPlayground.playground */,
 			);
 			path = "Assessment 3";
 			sourceTree = "<group>";
@@ -119,6 +134,19 @@
 				7C8628751A71F5C0004AAD02 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FBABF421A74C479001F95E9 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				7FBABF4F1A74DF0E001F95E9 /* 0013089_dsg-playing-card-deck-54-card-deck.png */,
+				7FBABF511A74EC0D001F95E9 /* gold-coins-in-a-pot-md.png */,
+				7FBABF491A74D01B001F95E9 /* play-now-button-en-us.png */,
+				7FBABF4D1A74D9A0001F95E9 /* card-game-48983_640.png */,
+				7FBABF471A74C831001F95E9 /* blackjack_logo.png */,
+				7FBABF451A74C5F8001F95E9 /* tableBackground.jpg */,
+			);
+			name = imgs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +229,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FBABF521A74EC0D001F95E9 /* gold-coins-in-a-pot-md.png in Resources */,
+				7FBABF501A74DF0E001F95E9 /* 0013089_dsg-playing-card-deck-54-card-deck.png in Resources */,
 				7C8628661A71F5C0004AAD02 /* Main.storyboard in Resources */,
 				7C86286B1A71F5C0004AAD02 /* LaunchScreen.xib in Resources */,
+				7FBABF461A74C5F8001F95E9 /* tableBackground.jpg in Resources */,
+				7FBABF4E1A74D9A0001F95E9 /* card-game-48983_640.png in Resources */,
+				7FBABF4A1A74D01B001F95E9 /* play-now-button-en-us.png in Resources */,
 				7C8628681A71F5C0004AAD02 /* Images.xcassets in Resources */,
+				7FBABF481A74C831001F95E9 /* blackjack_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

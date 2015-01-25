@@ -1,17 +1,23 @@
-//
-//  CardGame.swift
-//  Assessment 3
-//
-//  Created by Tedi Konda on 1/23/15.
-//  Copyright (c) 2015 Tedi Konda. All rights reserved.
-//
+// Playground - noun: a place where people can play
 
-import Foundation
+import UIKit
+
+
 protocol BlackJack {
     // Require a deal method
     func deal(Bool) -> Int
     // Require a first hand method
     func firstHand()
+}
+class Player {
+    
+    var score = 0
+    var playerType: Bool
+    
+    init(playerType:Bool){
+        self.playerType = playerType
+    }
+    
 }
 
 class CardGame: BlackJack {
@@ -55,4 +61,34 @@ class CardGame: BlackJack {
         self.cpu.score = deal(cpu.playerType)
     }
     
+    
+    
+    
 }
+
+var g1 = CardGame()
+
+g1.firstHand()
+g1.cpu.playerType
+g1.newPlayer.playerType
+g1.newPlayer.score
+g1.cpu.score
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

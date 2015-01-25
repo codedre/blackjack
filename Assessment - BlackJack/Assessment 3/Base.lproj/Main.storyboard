@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,20 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tableBackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="k8O-NQ-rFF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kz-6e-el2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="play-now-button-en-us.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="96" y="462" width="199" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startNewGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZLW-o3-eq5"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-XE-fcY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="94" y="415" width="213" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0013089_dsg-playing-card-deck-54-card-deck.png" translatesAutoresizingMaskIntoConstraints="NO" id="uo9-BF-Qok">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="-5" y="-8" width="292" height="169"/>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="uo9-BF-Qok"/>
+                                    </mask>
                                 </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="395" width="300" height="169"/>
+                                    <mask key="subviews">
+                                        <include reference="uo9-BF-Qok"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nzb-o7-O9O" appends="YES" id="Nd9-Ff-cyS"/>
+                                </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlackJack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBz-Tp-YFE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Game!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBz-Tp-YFE">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="99" width="368" height="29"/>
+                                    <rect key="frame" x="16" y="171" width="368" height="116"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-bq-sus">
@@ -38,37 +74,244 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="550" width="368" height="30"/>
+                                    <rect key="frame" x="11" y="120" width="368" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="8IH-ar-xyl" kind="show" id="d9H-Pi-dWC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fl-aB-h7q">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="41" y="162" width="89" height="20.5"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-Uq-KgQ">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="158" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Hand:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXZ-XU-Akz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="347" width="86" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealers Hand:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDF-Gc-B6W">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="318" width="109" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCZ-hs-7Qa">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="174" y="318" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcX-wa-iK7">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="174" y="347" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackjack_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5c6-KB-EeF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="66" y="15" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPn-U8-1fE">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="285" width="78" height="29"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold-coins-in-a-pot-md.png" translatesAutoresizingMaskIntoConstraints="NO" id="1MJ-b3-LpQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="3kv-XA-WgD"/>
+                                    <constraint firstAttribute="height" constant="66" id="AUe-Ds-h3I"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3kv-XA-WgD"/>
+                                        <exclude reference="AUe-Ds-h3I"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="294" y="534" width="70" height="66"/>
+                                    <mask key="constraints">
+                                        <include reference="3kv-XA-WgD"/>
+                                        <include reference="AUe-Ds-h3I"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Starting $" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NV0-ch-wza">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="247" width="249" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bet $" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SC1-QH-dX2">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="288" width="249" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ap2-aH-UxC">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="NXJ-Pr-b0M"/>
+                                    <constraint firstAttribute="width" constant="83" id="oAC-LY-aKc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.87454169820000005" blue="0.32902987379999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NXJ-Pr-b0M"/>
+                                        <exclude reference="oAC-LY-aKc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="NXJ-Pr-b0M"/>
+                                        <include reference="oAC-LY-aKc"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1MJ-b3-LpQ" secondAttribute="bottom" id="6HM-sL-U0J"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="k8O-NQ-rFF" secondAttribute="bottom" id="8pV-oR-O43"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k8O-NQ-rFF" secondAttribute="trailing" constant="-26" id="Cu1-39-MeF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ap2-aH-UxC" secondAttribute="bottom" constant="17" id="Fwu-4R-u9V"/>
+                            <constraint firstItem="k8O-NQ-rFF" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-9" id="Zke-Um-Yqt"/>
+                            <constraint firstItem="k8O-NQ-rFF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-25" id="c7g-Y2-7e5"/>
+                            <constraint firstItem="ap2-aH-UxC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-25" id="mEr-Qq-hHU"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="k8O-NQ-rFF"/>
+                                <exclude reference="3kz-6e-el2"/>
                                 <exclude reference="VLj-XE-fcY"/>
                                 <exclude reference="xBz-Tp-YFE"/>
                                 <exclude reference="oBa-bq-sus"/>
+                                <exclude reference="2Fl-aB-h7q"/>
+                                <exclude reference="6rP-Uq-KgQ"/>
+                                <exclude reference="KXZ-XU-Akz"/>
+                                <exclude reference="vDF-Gc-B6W"/>
+                                <exclude reference="TCZ-hs-7Qa"/>
+                                <exclude reference="xcX-wa-iK7"/>
+                                <exclude reference="5c6-KB-EeF"/>
+                                <exclude reference="cPn-U8-1fE"/>
+                                <exclude reference="1MJ-b3-LpQ"/>
+                                <exclude reference="NV0-ch-wza"/>
+                                <exclude reference="SC1-QH-dX2"/>
+                                <exclude reference="ap2-aH-UxC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6HM-sL-U0J"/>
+                                <exclude reference="8pV-oR-O43"/>
+                                <exclude reference="Fwu-4R-u9V"/>
+                                <exclude reference="mEr-Qq-hHU"/>
+                                <exclude reference="Cu1-39-MeF"/>
+                                <exclude reference="Zke-Um-Yqt"/>
+                                <exclude reference="c7g-Y2-7e5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="k8O-NQ-rFF"/>
+                                <include reference="3kz-6e-el2"/>
                                 <include reference="VLj-XE-fcY"/>
                                 <include reference="xBz-Tp-YFE"/>
                                 <include reference="oBa-bq-sus"/>
+                                <include reference="2Fl-aB-h7q"/>
+                                <include reference="6rP-Uq-KgQ"/>
+                                <include reference="KXZ-XU-Akz"/>
+                                <include reference="vDF-Gc-B6W"/>
+                                <include reference="TCZ-hs-7Qa"/>
+                                <include reference="xcX-wa-iK7"/>
+                                <include reference="5c6-KB-EeF"/>
+                                <include reference="cPn-U8-1fE"/>
+                                <include reference="1MJ-b3-LpQ"/>
+                                <include reference="NV0-ch-wza"/>
+                                <include reference="SC1-QH-dX2"/>
+                                <include reference="ap2-aH-UxC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6HM-sL-U0J"/>
+                                <include reference="8pV-oR-O43"/>
+                                <include reference="Fwu-4R-u9V"/>
+                                <include reference="mEr-Qq-hHU"/>
+                                <include reference="Cu1-39-MeF"/>
+                                <include reference="Zke-Um-Yqt"/>
+                                <include reference="c7g-Y2-7e5"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="R3H-Iz-ZcW" appends="YES" id="agF-AX-fMn"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="kye-4f-Ber"/>
                     <connections>
+                        <outlet property="betAmount" destination="SC1-QH-dX2" id="o0e-az-fae"/>
+                        <outlet property="dealersHandLabel" destination="vDF-Gc-B6W" id="wh8-x6-Co2"/>
+                        <outlet property="dealersHandResult" destination="TCZ-hs-7Qa" id="ksz-3h-iYh"/>
+                        <outlet property="displayPlayerScore" destination="6rP-Uq-KgQ" id="QL6-ha-gu5"/>
+                        <outlet property="endGameResults" destination="cPn-U8-1fE" id="O3T-yw-hB8"/>
+                        <outlet property="enterInitialPotAmount" destination="NV0-ch-wza" id="JUe-9U-ty2"/>
+                        <outlet property="moneyPot" destination="1MJ-b3-LpQ" id="Rce-kw-0p5"/>
+                        <outlet property="playButton" destination="3kz-6e-el2" id="NZz-mj-0nL"/>
+                        <outlet property="playersHandLabel" destination="KXZ-XU-Akz" id="BC3-hM-vjU"/>
+                        <outlet property="playersHandResult" destination="xcX-wa-iK7" id="6QU-Xk-XiS"/>
                         <outlet property="redBox" destination="VLj-XE-fcY" id="Vv1-Uh-GQ7"/>
+                        <outlet property="resultsLabel" destination="xBz-Tp-YFE" id="Xi2-fD-SpN"/>
+                        <outlet property="totalAmountOfMoney" destination="ap2-aH-UxC" id="17J-j9-Zqd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="R3H-Iz-ZcW">
+                    <connections>
+                        <action selector="stopDealingCards:" destination="vXZ-lx-hvc" id="bSt-vI-m2e"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="nzb-o7-O9O">
+                    <connections>
+                        <action selector="dealNewCard:" destination="vXZ-lx-hvc" id="OQL-6c-99a"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1357.5" y="237"/>
+            <point key="canvasLocation" x="1299" y="237"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="hp2-PF-vmj">
@@ -127,4 +370,11 @@
             <point key="canvasLocation" x="2107.5" y="237"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="0013089_dsg-playing-card-deck-54-card-deck.png" width="600" height="600"/>
+        <image name="blackjack_logo.png" width="600" height="294"/>
+        <image name="gold-coins-in-a-pot-md.png" width="276" height="298"/>
+        <image name="play-now-button-en-us.png" width="263" height="73"/>
+        <image name="tableBackground.jpg" width="1136" height="640"/>
+    </resources>
 </document>

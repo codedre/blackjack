@@ -10,4 +10,11 @@ import Foundation
 
 class Player {
     
+    var score = 0
+    var playerType: Bool
+    
+    init(playerType:Bool){
+        self.playerType = playerType
+    }
+    
 }
