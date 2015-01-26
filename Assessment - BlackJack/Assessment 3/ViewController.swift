@@ -91,10 +91,12 @@ class ViewController: UIViewController {
         if newGame.newPlayer.score == 21 && newGame.cpu.score == 21 {
             endGame()
             resultsLabel.text = "Its a Tie! But the house always wins!"
+            playButton.hidden = true
             
         } else if newGame.newPlayer.score == 21 {
             endGame()
             resultsLabel.text = "You Win"
+            playButton.hidden = true
         }
          playButton.hidden = true
     }
